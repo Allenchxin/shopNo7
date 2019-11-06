@@ -11,6 +11,7 @@
         <module>shopno7-registry</module>
         <module>shopno7-gateway</module>
         <module>shopno7-item</module>
+        <module>shopno7-common</module>
     </modules>
     <packaging>pom</packaging>
 
