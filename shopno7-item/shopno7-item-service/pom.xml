@@ -49,9 +49,9 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.leyou.item</groupId>
-            <artifactId>leyou-item-interface</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <groupId>com.shopno7.item</groupId>
+            <artifactId>shopno7-item-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <!-- springboot检测服务启动器 -->
         <dependency>
