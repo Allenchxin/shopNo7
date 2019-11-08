@@ -1,6 +1,6 @@
-package com.shopno7.mapper;
+package com.shopno7.item.mapper;
 
-import com.shopno7.Category;
+import com.shopno7.item.Category;
 import tk.mybatis.mapper.common.Mapper;
 
 

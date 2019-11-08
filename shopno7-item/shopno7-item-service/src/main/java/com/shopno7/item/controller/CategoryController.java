@@ -48,7 +48,7 @@ public class CategoryController {
             List<Category> categories = categoryService.queryCategoryListByParentId(pid);
             if (CollectionUtils.isEmpty(categories)) {
                 logger.info("查询商品分类为空");
-                return ResponseEntity.notFound().build();
+                return ResponseEntity.badRequest().build();
             }
             return ResponseEntity.ok(categories);
         } catch (Exception e) {
