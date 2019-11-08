@@ -1,13 +1,16 @@
-package com.shopno7.controller;
+package com.shopno7.item.controller;
 
-import com.shopno7.Category;
-import com.shopno7.service.CategoryService;
-import org.apache.logging.log4j.Logger;
+import com.shopno7.item.Category;
+import com.shopno7.item.service.CategoryService;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.CollectionUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -23,7 +26,7 @@ import java.util.List;
 @Controller
 @RequestMapping("category")
 public class CategoryController {
-    private Logger logger;
+    private static final Logger logger = LoggerFactory.getLogger(CategoryController.class);
 
     @Autowired
     private CategoryService categoryService;
@@ -34,10 +37,11 @@ public class CategoryController {
      * @param pid
      * @return
      */
+    @GetMapping("list")
     public ResponseEntity<List<Category>> queryCategoryListByParentId(@RequestParam(value = "pid", defaultValue = "0") Long pid) {
 
         try {
-            if (pid == null && pid.longValue() < 0) {//如果请求参数为0，返回错误请求
+            if (pid == null || pid.longValue() < 0) {//如果请求参数为0，返回错误请求
                 logger.info("请求参数为空======>" + pid);
                 return ResponseEntity.badRequest().build();
             }
