@@ -18,4 +18,11 @@
         <module>shopno7-item-interface</module>
         <module>shopno7-item-service</module>
     </modules>
+    <!--<dependencies>
+        <dependency>
+            <groupId>com.shopno7.common</groupId>
+            <artifactId>shopno7-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>-->
 </project>

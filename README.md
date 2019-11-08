@@ -25,5 +25,10 @@
 - 订单微服务：实现订单相关
 - 购物车微服务：实现购物车相关功能
 - 用户中心：用户的登录注册等功能
-- Eureka注册中心
-- Zuul网关服务
+          - Eureka注册中心
+          - Zuul网关服务
+
+项目采坑点：
+20191109
+1、添加log4j日志时，需要排除spring-boot-starter-web的依赖冲突问题，依赖引入时<scope>compile</scope>参数不可少
+本地spring-boot是main方法启动：compile,测试环境：test

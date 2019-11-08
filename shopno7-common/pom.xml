@@ -12,5 +12,14 @@
     <groupId>com.shopno7.common</groupId>
     <artifactId>shopno7-common</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
 
 </project>
