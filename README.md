@@ -51,3 +51,6 @@
 ①如果请求体是对象，会转成json发送
 ②如果请求体是string,会做为普通表单发送，需要自己保证键值对
 
+4、数据库存储乱码问题处理方式
+添加数据源的时候后面指定编码格式即可解决问题
+jdbc:mysql://localhost:3306/shopno7?characterEncoding=utf-8
