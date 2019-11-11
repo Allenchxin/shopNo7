@@ -1,6 +1,6 @@
 package com.shopno7.item.mapper;
 
-import com.shopno7.item.Category;
+import com.shopno7.pojo.Category;
 import tk.mybatis.mapper.common.Mapper;
 
 

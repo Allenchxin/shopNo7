@@ -1,6 +1,6 @@
 package com.shopno7.item.controller;
 
-import com.shopno7.item.Category;
+import com.shopno7.pojo.Category;
 import com.shopno7.item.service.CategoryService;
 
 import org.slf4j.Logger;
@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  * @ClassName CategoryController
- * @Description TODO
+ * @Description 分类查询controller
  * @Author Allen·Chen
  * @Date 2019/11/8 22:41
  * @Version 1.0
@@ -34,7 +34,7 @@ public class CategoryController {
     /**
      * 根据id查询商品分类
      *
-     * @param pid
+     * @param pid 父节点
      * @return
      */
     @GetMapping("list")
@@ -55,5 +55,16 @@ public class CategoryController {
             logger.error("查询商品分类出现异常", e);
         }
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+    }
+
+    /**
+     * @param pid  父节点
+     * @param name 分类名称
+     * @return
+     */
+    @GetMapping("add")
+    public ResponseEntity<List<Category>> addCategoryListByParentId(@RequestParam(value = "pid") Long pid, String name) {
+        categoryService.addCategoryListByParentId(pid,name);
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 }
