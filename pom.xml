@@ -12,9 +12,10 @@
         <module>shopno7-gateway</module>
         <module>shopno7-item</module>
         <module>shopno7-common</module>
+        <module>shopno7-upload</module>
     </modules>
-    <packaging>pom</packaging>
 
+    <packaging>pom</packaging>
     <name>shopno7</name>
     <description>demo project for study</description>
 
