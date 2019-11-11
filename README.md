@@ -32,3 +32,22 @@
 20191109
 1、添加log4j日志时，需要排除spring-boot-starter-web的依赖冲突问题，依赖引入时<scope>compile</scope>参数不可少
 本地spring-boot是main方法启动：compile,测试环境：test
+
+20191111
+1、跨域问题
+浏览器对JavaScript的同源策略限制
+跨域问题是对ajax请求的一种安全限制：一个页面发起异步请求，只能是与当前页面域名相同的路径，这能有效的阻止跨跨域攻击
+跨域原因：
+①域名不同
+②域名相同，端口不同
+③二级域名不同
+
+2、解决跨越问题的三种方式
+①jsonP()
+②nginx反向代理
+③CORS(CROSS-ORIGIN RESOURCE SHARING)跨域资源共享技术
+
+3、axios处理请求体的原则会根据请求数据的格式来定：
+①如果请求体是对象，会转成json发送
+②如果请求体是string,会做为普通表单发送，需要自己保证键值对
+

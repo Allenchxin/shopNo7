@@ -1,4 +1,4 @@
-package com.shopno7.item;
+package com.shopno7;
 
 
 import org.springframework.boot.SpringApplication;
